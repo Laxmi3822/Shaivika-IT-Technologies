@@ -198,6 +198,7 @@ function initModals() {
 function initContactForm() {
   const form = document.querySelector('#contactForm');
   if (!form) return;
+  if (form.getAttribute('data-secure-handler') === 'true') return;
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
